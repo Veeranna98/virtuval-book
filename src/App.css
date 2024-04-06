@@ -2,55 +2,59 @@
   text-align: center;
 }
 
-.App-header {
-  background-color: #1759dd;
-  padding: 20px;
+header {
+  background-color: rgb(40, 44, 52);
+  padding: 20px 0;
+  color: white;
 }
 
-.main-content {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+h1 {
+  margin: 0;
+}
+
+.search-bar {
   margin-top: 20px;
 }
 
-.book-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+.search-bar input {
+  padding: 8px;
+  margin-right: 10px;
 }
 
-.book-item {
+.search-bar button {
+  padding: 8px 16px;
+  background-color: blue;
+  color: white;
+  border: none;
   cursor: pointer;
 }
 
-.book-item img {
-  width: 150px;
-  height: auto;
+.main {
+  padding: 20px;
 }
 
-.book-detail {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #fff;
-  padding: 20px;
-  border: 1px solid #ccc;
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.book {
+  cursor: pointer;
+  border: 1px solid white;
+  padding: 10px;
   border-radius: 5px;
 }
 
-.book-detail img {
-  width: 200px;
+.book img {
+  max-width: 100%;
   height: auto;
 }
 
-.book-detail button {
-  margin-bottom: 10px;
+.book h3 {
+  margin: 10px 0;
 }
 
-.book-detail a {
-  display: block;
-  margin-top: 10px;
+.book p {
+  color: grey;
 }

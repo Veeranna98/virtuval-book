@@ -1,16 +1,19 @@
 import React from 'react';
 
-function BookDetail({ book, onClose }) {
+const BookDetail = ({ book }) => {
   return (
     <div className="book-detail">
-      <button onClick={onClose}>Close</button>
-      <img src={book.volumeInfo.imageLinks?.thumbnail} alt={book.volumeInfo.title} />
+      <img src={book.volumeInfo.imageLinks.thumbnail} alt={book.volumeInfo.title} />
       <h2>{book.volumeInfo.title}</h2>
       <p>{book.volumeInfo.description}</p>
-      <a href={book.volumeInfo.previewLink} target="_blank" rel="noopener noreferrer">Read Now</a>
-      <a href={book.volumeInfo.infoLink} target="_blank" rel="noopener noreferrer">More Info</a>
+      <button onClick={() => window.open(book.volumeInfo.previewLink, '_blank')}>
+        Read Now
+      </button>
+      <button onClick={() => window.open(book.volumeInfo.infoLink, '_blank')}>
+        More Info
+      </button>
     </div>
   );
-}
+};
 
 export default BookDetail;
